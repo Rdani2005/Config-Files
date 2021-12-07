@@ -15,3 +15,4 @@ def UsingMouseLayouts():
     ]
     return mouse_list
 
+mouse = UsingMouseLayouts()

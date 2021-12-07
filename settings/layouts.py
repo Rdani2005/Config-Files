@@ -29,3 +29,15 @@ def init_layouts():
     ]
 
     return layout_list
+
+
+layouts = init_layouts()
+
+floating_layout = layout.Floating(float_rules=[
+    # Run the utility of `xprop` to see the wm class and name of an X client.
+    *layout.Floating.default_float_rules,
+    Match(wm_class='Confirmation'),  # tastyworks exit box
+    Match(wm_class='Qalculate!'),  # qualculate-gtk
+    Match(wm_class='kdenlive'),  # kdenlive
+    Match(wm_class='pinetry-gtk-2'),  # GPG Key pass entry
+])

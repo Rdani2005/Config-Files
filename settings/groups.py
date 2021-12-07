@@ -1,7 +1,8 @@
 # libraries
 from libqtile import layout
-from libqtile.config import Group
-
+from libqtile.config import Group, key
+from libqtile.command import lazy
+from .keys import mod, keys
 
 def init_groups():
     list_group = [
@@ -16,3 +17,5 @@ def init_groups():
         Group("GAMES", layout="monadtall")
     ]
     return list_group
+
+groups = init_groups()
