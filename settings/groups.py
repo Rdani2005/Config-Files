@@ -1,21 +1,25 @@
 # libraries
-from libqtile import layout
 from libqtile.config import Group, key
 from libqtile.command import lazy
 from .keys import mod, keys
 
-def init_groups():
-    list_group = [
-        Group("DEV", layout="monadtall"),
-        Group("WEB", layout="monadtall"),
-        Group("GFX", layout="monadtall"),
-        Group("SYS", layout="monadtall"),
-        Group("VBOX",layout="monadtall"),
-        Group("DOC", layout="monadtall"),
-        Group("VIDEOS",layout="monadtall"),
-        Group("CHAT", layout="monadtall"),
-        Group("GAMES", layout="monadtall")
+groups = [
+    Group(i) for i in [
+        "DEV",
+        "WEB",
+        "GFX",
+        "SYS",
+        "VBOX",
+        "DOC",
+        "VIDEOS",
+        "CHAT",
+        "GAMES"
     ]
-    return list_group
+]
 
-groups = init_groups()
+for i, group in enumerate(groups):
+    actual_key = str(i + 1)
+    keys.extend([
+        Key([mod], actual_key, lazy.group[group.name].toscreen()),
+        Key([mod, "shift"], actual_key, lazy.window.togroup(group.name))
+    ])

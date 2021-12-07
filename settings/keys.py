@@ -1,6 +1,6 @@
 from libqtile.command import lazy
 from libqtile.config import Key
-
+from typing import List
 mod = "mod4"
 
 my_apps = [
@@ -22,7 +22,6 @@ keys = [Key([0], key[1], *key[2:]) for key in [
     ([mod, "shift"], "Return", lazy.spawn(my_apps[3])),
     # File browser
     ([mod], "m", lazy.spawn(my_apps[4])),
-
     #----------Some Qtile Configs---------------------
     # Focus Windows
     ([mod], "Left", lazy.layout.left()),
