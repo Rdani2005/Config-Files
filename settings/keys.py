@@ -1,8 +1,8 @@
 from libqtile.command import lazy
 from libqtile.config import Key
 from typing import List
-mod = "mod4"
 
+mod = "mod4"
 my_apps = [
     "alacritty",
     "firefox",
