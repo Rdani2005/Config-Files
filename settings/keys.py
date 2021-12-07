@@ -15,12 +15,13 @@ keys = [Key([0], key[1], *key[2:]) for key in [
     #---------Apps that I need--------------------
     # Terminal
     ([mod], "Return", lazy.spawn(my_apps[0])),
-    # Browser and VS Code
+    # Browser and Code Editor
     ([mod], "b", lazy.spawn(my_apps[1])),
     ([mod], "c", lazy.spawn(my_apps[2])),
     # Menu App
     ([mod, "shift"], "Return", lazy.spawn(my_apps[3])),
-
+    # File browser
+    ([mod], "m", lazy.spawn(my_apps[4])),
 
     #----------Some Qtile Configs---------------------
     # Focus Windows

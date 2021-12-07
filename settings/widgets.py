@@ -1,5 +1,8 @@
 from libqtile import widget
 # TODO: Make changes to this file. It is VERY long
+# TODO: We're going to create a new Carpet called Personal Widgets
+#       Over there, we're going to create methods that returns diferent widgets,
+#       with the caracteristics that i need, so then I'll be able to change this file
 # colors
 colors = [
     "#26c70a", # group text active color
